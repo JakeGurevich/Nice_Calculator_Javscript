@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #grid {
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 1em;
+        background-color: beige;
+        grid-template-rows: repeat(6, 80px);
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* place-content: center; */
+        padding:5px;
+        border-radius: 5px;
+      }
+      .grid-item {
+          font-size: 1.4em;
+        padding: 1em;
+        border: 1px solid #ddd;
+        background-color: rgb(250, 235, 175);
+        border-radius: 5px;
+        text-align: center;
+      }
+      #I1 {
+        grid-column: 1 / 5;
+        grid-row: 1/ 2;
+        background-color: cornsilk;
+      }
+      #I2 {
+        grid-column: 1 / 3;
+        grid-row: 2/ 3;
+        background-color: cornsilk;
+      }
+      #I3 {
+        grid-column: 3/ 5;
+        grid-row: 2/ 3;
+        background-color: cornsilk;
+      }
+      #I16 {
+        grid-column: 1 / 3;
+        grid-row: 6/ 7;
+        
+      }
+      #I7,#I11,#I15{
+        background-color: cornsilk;
+      }
+      #I17 {
+        grid-column: 3 / 5;
+        grid-row: 6/ 7;
+        background-color: cornsilk;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="grid">
+        <div id="I1" class="grid-item 1"></div>
+        <div id="I2" class="grid-item " onclick="clearData()" >C</div>
+        <div id="I3" class="grid-item operation" onclick="getOperationClick(this)">/</div>
+        <div id="I4" class="grid-item" onclick="getClick(this)">1</div>
+        <div id="I5" class="grid-item" onclick="getClick(this)">2</div>
+        <div id="I6" class="grid-item" onclick="getClick(this)">3</div>
+        <div id="I7" class="grid-item operation" onclick="getOperationClick(this)">*</div>
+        <div id="I8" class="grid-item" onclick="getClick(this)">4</div>
+        <div id="I9" class="grid-item" onclick="getClick(this)">5</div>
+        <div id="I10" class="grid-item" onclick="getClick(this)">6</div>
+        <div id="I11" class="grid-item operation" onclick="getOperationClick(this)">-</div>
+        <div id="I12" class="grid-item operation" onclick="getClick(this)">7</div>
+        <div id="I13" class="grid-item" onclick="getClick(this)">8</div>
+        <div id="I14" class="grid-item" onclick="getClick(this)">9</div>
+        <div id="I15" class="grid-item" onclick="getOperationClick(this)">+</div>
+        <div id="I16" class="grid-item" onclick="getClick(this)">0</div>
+        <div id="I17" class="grid-item operation" onclick="getResult()">=</div>
+       
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
